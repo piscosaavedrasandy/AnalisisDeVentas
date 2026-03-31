@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dashboard-bg: #131520;
+  --color-sidebar-bg: #1c1f2e;
+  --color-card-bg: #1c1f2e;
+  --color-accent-purple: #8b5cf6;
+  --color-accent-pink: #f43f5e;
+  --color-accent-orange: #f59e0b;
+  --color-accent-blue: #3b82f6;
+}
+
+@layer base {
+  body {
+    @apply bg-dashboard-bg text-white antialiased;
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-neutral-700 rounded-full;
+}
+
+.glass-card {
+  @apply bg-card-bg border border-white/5 shadow-xl;
+}
+
+.sidebar-item-active {
+  @apply bg-white/10 text-white border-l-4 border-accent-purple;
+}
